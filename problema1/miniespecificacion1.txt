@@ -1,0 +1,28 @@
+Solución que permita calcular y mostrar el valor a cancelar de una planilla de luz. 
+Se debe ingresar el valor de costo por kilovatio/hora y el número de kilovatios consumidos en el mes. 
+Si el usuario tiene edad mayor a 65 años, se debe descontrar el 10%.
+
+1. Inicio
+
+2. costo_kv, d [0-n]
+3. kv_consumidos, d [0-n]
+4. valor_descuento, d [0-n] 
+5. total, d [0-n]
+6. edad, i [0-n]
+
+7. << "¿Cuál es el costo del kv/h?"
+8.>> costo_kv
+9.<< "¿Cuántos kv consumió en el mes?"
+10.>> kv_consumidos
+11. << "¿Cuál es su edad?"
+12. >> edad
+
+13. total<-- costo_kv * kv_consumidos
+
+14. Si edad > 65 entonces
+15.     valor_descuento <-- total * 0.10
+16.     total <-- total - valor_descuento
+17. Fin si
+
+18. >> "El valor de su planilla es: " + total 
+19. Fin
