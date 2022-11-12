@@ -1,0 +1,32 @@
+Solución que imprima el costo de un pedido de un artículo del cual se tiene la descripción, la cantidad que se requiere y el precio unitario. Si la cantidad pedida excede de 50 unidades,
+se hace un descuento de 15%.
+
+1. Inicio
+
+2. costo, d [0-n]
+3. articulo, x(500)[{A-Z},{a-z},{BS}]
+4. cantidad_requerida, i [0-n]
+5. precio_u, d [0-n]
+6. descuento, d [0-n]
+
+7. << "Ingresar el nombre del artículo"
+8. >> articulo
+
+9. << "Ingresar el precio unitario de:" + articulo
+10. >> precio_u
+
+11. << "Cuantos/as" + articulo + "va a llevar"
+12. >> cantidad_requerida
+
+13. costo <-- precio_u * cantidad_requerida
+14. descuento <-- 0
+
+15. Si cantidad_requerida > 50 entonces
+16.    descuento <-- (precio_u * cantidad_requerida) * 0.15
+17.    costo <-- (precio_u * cantidad_requerida) - descuento
+18.    descuento <-- 15%
+19. Fin si
+
+20. <<"El costo de su pedido es:" + costo + "con un descuento del:" + descuento
+
+21. Fin

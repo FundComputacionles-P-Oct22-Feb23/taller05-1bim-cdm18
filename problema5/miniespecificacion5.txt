@@ -1,0 +1,49 @@
+Se debe generar un algoritmo y miniespecificación que permita calcular y 
+mostrar el valor total a pagar mensual de servicios básicos de una persona.
+Los servicios básicos son: agua, telefono. 
+Si la persona es menor a 20 años se descuenta el 20% del total mensual. 
+Para calcular el costo mensual a pagar el agua, 
+se debe ingresar el número de litros de agua consumidos en el mes y el costo de cada litro de agua. 
+Para calcular el costo del teléfono, 
+se debe ingresar el número de minutos gastados en el mes y el costo de cada minuto.
+
+
+1. Inicio
+
+2. costo_mensual_agua, d [0-n]
+3. consumo_litros, d [0-n]
+4. costo_litro, d [0-n]
+5. costo_mensual_telefono, d [0-n]
+6. minutos_gastados, d [0-n]
+7. costo_minuto, d [0-n]
+8. descuento, d [0-n]
+9. valor_total, d [0-n]
+10. edad, i [0-n]
+
+11. <<"¿Cuál es su edad?"
+12. >> edad
+13.  <<"¿Cuántos litros de agua consumió en el mes?"
+14. >> consumo_litros
+15. << "¿Cuánto vale cada litro de agua?"
+16. >> costo_litro
+17. <<"¿Cuántos minutos de teléfono ha gastado en el mes?"
+18. >> minutos_gastados
+19. << "¿Cuál es el costo del minuto?"
+20. >> costo_minuto
+
+21. costo_mensual_agua <-- (costo_litro * consumo_Litros) * 30
+22. costo_mensual_telefono <-- (costo_minuto * minutos_gastados) * 30 
+23. valor_total <-- costo_mensual_agua + costo_mensual_telefono
+24. descuento <-- 0
+
+25. Si edad < 20 entonces
+26.    descuento <-- valor_total * 0.2
+27.    valor_total <-- valor_total - descuento
+28. Fin si
+
+29. << "El valor total mensual del agua es: " + costo_mensual_agua
+30. << "El valor total mensual del telefono es: " + costo_mensual_telefono
+31. << "Su descuento es de:" + descuento + "ya que tiene " + edad + "años de edad"
+32. << "El valor total a pagar del agua y luz con su descuento es de:" + valor_total
+
+33. Fin 
